@@ -1,0 +1,412 @@
+-------------------------------------------------------------------------------
+Test set: RegressionTest0
+-------------------------------------------------------------------------------
+Tests run: 500, Failures: 0, Errors: 68, Skipped: 0, Time elapsed: 0.144 sec <<< FAILURE! - in RegressionTest0
+test0002(RegressionTest0)  Time elapsed: 0.004 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0002(RegressionTest0.java:27)
+
+test0009(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0009(RegressionTest0.java:136)
+
+test0012(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0012(RegressionTest0.java:204)
+
+test0016(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0016(RegressionTest0.java:278)
+
+test0018(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0018(RegressionTest0.java:327)
+
+test0019(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0019(RegressionTest0.java:373)
+
+test0021(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0021(RegressionTest0.java:430)
+
+test0022(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0022(RegressionTest0.java:461)
+
+test0028(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0028(RegressionTest0.java:612)
+
+test0029(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0029(RegressionTest0.java:663)
+
+test0031(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0031(RegressionTest0.java:751)
+
+test0033(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0033(RegressionTest0.java:842)
+
+test0036(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0036(RegressionTest0.java:943)
+
+test0039(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0039(RegressionTest0.java:1027)
+
+test0044(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0044(RegressionTest0.java:1221)
+
+test0053(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0053(RegressionTest0.java:1534)
+
+test0074(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0074(RegressionTest0.java:2677)
+
+test0077(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0077(RegressionTest0.java:2866)
+
+test0084(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0084(RegressionTest0.java:3312)
+
+test0089(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0089(RegressionTest0.java:3709)
+
+test0107(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0107(RegressionTest0.java:4395)
+
+test0116(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0116(RegressionTest0.java:4883)
+
+test0127(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0127(RegressionTest0.java:5688)
+
+test0134(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0134(RegressionTest0.java:6377)
+
+test0147(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0147(RegressionTest0.java:7121)
+
+test0149(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0149(RegressionTest0.java:7337)
+
+test0154(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0154(RegressionTest0.java:7664)
+
+test0156(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0156(RegressionTest0.java:7732)
+
+test0158(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0158(RegressionTest0.java:7840)
+
+test0161(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0161(RegressionTest0.java:8155)
+
+test0169(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0169(RegressionTest0.java:8592)
+
+test0173(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0173(RegressionTest0.java:8887)
+
+test0184(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0184(RegressionTest0.java:9641)
+
+test0189(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0189(RegressionTest0.java:9949)
+
+test0204(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0204(RegressionTest0.java:10742)
+
+test0218(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0218(RegressionTest0.java:11628)
+
+test0223(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0223(RegressionTest0.java:11947)
+
+test0235(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0235(RegressionTest0.java:12749)
+
+test0237(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0237(RegressionTest0.java:12900)
+
+test0245(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0245(RegressionTest0.java:13648)
+
+test0251(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0251(RegressionTest0.java:14249)
+
+test0259(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0259(RegressionTest0.java:14672)
+
+test0260(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0260(RegressionTest0.java:14797)
+
+test0262(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0262(RegressionTest0.java:14932)
+
+test0272(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0272(RegressionTest0.java:15812)
+
+test0273(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0273(RegressionTest0.java:15900)
+
+test0281(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0281(RegressionTest0.java:16414)
+
+test0291(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0291(RegressionTest0.java:17183)
+
+test0314(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0314(RegressionTest0.java:18931)
+
+test0315(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0315(RegressionTest0.java:19032)
+
+test0329(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0329(RegressionTest0.java:20522)
+
+test0344(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0344(RegressionTest0.java:21987)
+
+test0346(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0346(RegressionTest0.java:22135)
+
+test0351(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0351(RegressionTest0.java:22471)
+
+test0359(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0359(RegressionTest0.java:22972)
+
+test0366(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0366(RegressionTest0.java:23542)
+
+test0371(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0371(RegressionTest0.java:23749)
+
+test0380(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0380(RegressionTest0.java:24468)
+
+test0382(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0382(RegressionTest0.java:24698)
+
+test0387(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0387(RegressionTest0.java:25019)
+
+test0394(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0394(RegressionTest0.java:25556)
+
+test0409(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0409(RegressionTest0.java:26885)
+
+test0415(RegressionTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0415(RegressionTest0.java:27356)
+
+test0426(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0426(RegressionTest0.java:28240)
+
+test0439(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0439(RegressionTest0.java:28951)
+
+test0443(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0443(RegressionTest0.java:29270)
+
+test0466(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0466(RegressionTest0.java:31378)
+
+test0486(RegressionTest0)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ProgramCorrect.findMax(ProgramCorrect.java:9)
+	at TestProgram.TestStudentSubmission(TestProgram.java:9)
+	at RegressionTest0.test0486(RegressionTest0.java:32972)
+

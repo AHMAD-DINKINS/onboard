@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: ProgramIncorrect_ESTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.01 sec <<< FAILURE! - in ProgramIncorrect_ESTest
+test4(ProgramIncorrect_ESTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NoSuchMethodError: ProgramIncorrect.findMax([J)J
+	at ProgramIncorrect_ESTest.test4(ProgramIncorrect_ESTest.java:68)
+
+test2(ProgramIncorrect_ESTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NoSuchMethodError: ProgramIncorrect.findMax([J)J
+	at ProgramIncorrect_ESTest.test2(ProgramIncorrect_ESTest.java:37)
+
+test3(ProgramIncorrect_ESTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NoSuchMethodError: ProgramIncorrect.findMax([J)J
+	at ProgramIncorrect_ESTest.test3(ProgramIncorrect_ESTest.java:53)
+
+test0(ProgramIncorrect_ESTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.NoSuchMethodError: ProgramIncorrect.findMax([J)J
+	at ProgramIncorrect_ESTest.test0(ProgramIncorrect_ESTest.java:21)
+
+test1(ProgramIncorrect_ESTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.NoSuchMethodError: ProgramIncorrect.findMax([J)J
+	at ProgramIncorrect_ESTest.test1(ProgramIncorrect_ESTest.java:29)
+

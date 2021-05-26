@@ -1,0 +1,91 @@
+Found crash: class java.lang.AssertionError - expected:<8697952292933005227> but was:<-8968544300136341719>
+Saved - /home/ahmaddinkins/onoard/target/fuzz-results/TestProgramJQF/TestStudentSubmission/failures/id_000000 random +crash
+Saving new input (at run 3): input #0 of size 16; total coverage = 5
+Saved - /home/ahmaddinkins/onoard/target/fuzz-results/TestProgramJQF/TestStudentSubmission/corpus/id_000000 random +count+cov+valid
+Found crash: class java.lang.AssertionError - expected:<7937277809281929112> but was:<-5575189114017408592>
+Saved - /home/ahmaddinkins/onoard/target/fuzz-results/TestProgramJQF/TestStudentSubmission/failures/id_000001 src:000000,havoc:4 +crash
+Found crash: class java.lang.ArrayIndexOutOfBoundsException - 0
+Saved - /home/ahmaddinkins/onoard/target/fuzz-results/TestProgramJQF/TestStudentSubmission/failures/id_000002 src:000000,havoc:29 +crash
+
+# Cycle 1 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
+
+# Cycle 2 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
+
+# Cycle 3 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
+Found crash: class java.lang.ArrayIndexOutOfBoundsException - 
+Saved - /home/ahmaddinkins/onoard/target/fuzz-results/TestProgramJQF/TestStudentSubmission/failures/id_000003 src:000000,havoc:16 +crash
+
+# Cycle 4 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
+
+# Cycle 5 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
+
+# Cycle 6 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
+
+# Cycle 7 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
+
+# Cycle 8 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
+
+# Cycle 9 completed.
+Here is a list of favored inputs:
+Input 0 is responsible for 5 branches
+Total 5 branches covered
+
+
+
+
