@@ -10,7 +10,7 @@ import java.util.Arrays;
 // import org.junit.*;
 
 @RunWith(JQF.class)
-public class TestProgram {
+public class TestProgramJQF {
 
     @Fuzz
     public void TestStudentSubmission(@From(IntArrayGenerator.class) int[] arr ){
