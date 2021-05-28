@@ -1,3 +1,4 @@
 .evosuite/
 myclasses.txt
 **/target/
+scripts/
