@@ -13,7 +13,7 @@
 
 
 # Evosuite (Maven Plugin)
-    - mvn evosuite:generate: this is used to generate test cases with EvoSuite. Tests will be generated for all classes in all submodules. You need to be sure the code is compiled, eg “mvn compile evosuite:generate” (mvn -Dcatch_undeclared_exceptions=false -Dclass=TestProgram evosuite:generate)
+    - mvn evosuite:generate: this is used to generate test cases with EvoSuite. Tests will be generated for all classes in all submodules. You need to be sure the code is compiled, eg “mvn compile evosuite:generate” (mvn evosuite:generate -Dcuts=PairProgram)
     - mvn evosuite:export: the generated tests will be copied over to another folder, which can be set with the “targetFolder” option (the default value is “src/test/java”)
     
 # Randoop (Command Line)

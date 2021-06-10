@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#clean repo
+# # clean repo
 # mvn clean
 # mvn compile
 
@@ -25,26 +25,26 @@
 #   do python ./scripts/comment_try_catch.py --test $file --uncomment
 # done
 
-# python scripts/init_test_runner.py --path-to-tests ./src/test/java/AppendPairProgram_ESTest.java --report ./target/surefire-reports/TEST-AppendPairProgram_ESTest.xml
+# python3 scripts/init_test_runner.py --path-to-tests ./src/test/java/AppendPairProgram_ESTest.java --report ./target/surefire-reports/TEST-AppendPairProgram_ESTest.xml --return-passing
 
-# python scripts/init_test_runner.py --path-to-tests ./src/test/java/ErrorTest.java --report ./target/surefire-reports/TEST-ErrorTest.xml
+# python3 scripts/init_test_runner.py --path-to-tests ./src/test/java/ErrorTest.java --report ./target/surefire-reports/TEST-ErrorTest.xml
 
-# python scripts/init_test_runner.py --path-to-tests ./src/test/java/ErrorTest.java --report ./target/surefire-reports/TEST-ErrorTest.xml --return-passing
+# python3 scripts/init_test_runner.py --path-to-tests ./src/test/java/RegressionTest.java --report ./target/surefire-reports/TEST-RegressionTest.xml --return-passing
 
 # mvn test-compile
 
-# Assuming 
-# java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:../junit-4.13.jar daikon.DynComp ErrorTest0
+#Assuming 
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:../junit-4.13.jar daikon.DynComp ErrorTest0
 
-# java -cp myclasspath:$DAIKONDIR/daikon.jar daikon.Chicory --comparability-file=ErrorTest0.decls-DynComp ErrorTest0
+java -cp myclasspath:$DAIKONDIR/daikon.jar daikon.Chicory --comparability-file=ErrorTest0.decls-DynComp ErrorTest0
 
-# java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:../junit-4.13.jar daikon.DynComp RegressionTest0
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:../junit-4.13.jar daikon.DynComp RegressionTest0
 
-# java -cp myclasspath:$DAIKONDIR/daikon.jar daikon.Chicory --comparability-file=RegressionTest0.decls-DynComp RegressionTest0
+java -cp myclasspath:$DAIKONDIR/daikon.jar daikon.Chicory --comparability-file=RegressionTest0.decls-DynComp RegressionTest0
 
-# java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:../junit-4.13.jar:../evosuite/standalone_runtime/target/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:../hamcrest-core-1.3.jar daikon.DynComp AppenPairProgram_ESTest
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:../junit-4.13.jar:../evosuite/standalone_runtime/target/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:../hamcrest-core-1.3.jar daikon.DynComp AppenPairProgram_ESTest
 
-# java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:../junit-4.13.jar:../evosuite/standalone_runtime/target/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:../hamcrest-core-1.3.jar daikon.Chicory --comparability-file=AppenPairProgram_ESTest.decls-DynComp AppenPairProgram_ESTest
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:../junit-4.13.jar:../evosuite/standalone_runtime/target/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:../hamcrest-core-1.3.jar daikon.Chicory --comparability-file=AppenPairProgram_ESTest.decls-DynComp AppenPairProgram_ESTest
 
 
 

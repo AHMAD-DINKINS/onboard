@@ -34,16 +34,18 @@ def create_main(tests, path_to_tests):
     test_filenames = " ".join(path_to_tests)
     
     for test_class in test_classes:
+        end = test_class[-1]
+        #TODO fix this
+        if end.isdigit():
+            test_class = test_class[:len(test_class) - 1]
         if not test_class in test_filenames:
             continue
-        end = test_class[-1]
-        if end.isnumeric():
-            test_class = test_class[:len(test_class) - 1]
         pattern = ' ?(.*' + test_class + '.*) ?'
         pattern = pattern.replace("\\S", "\S")
         match = re.match(pattern, test_filenames).group(0)
-        if end.isnumeric():
+        if end.isdigit():
             match = match.replace(test_class, test_class + end)
+            test_class = test_class + end
         path_to_testfile = os.path.abspath(match)
 
         with open(path_to_testfile) as f:
