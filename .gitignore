@@ -1,4 +1,7 @@
 .evosuite/
-myclasses.txt
+*.txt
 **/target/
-scripts/
+*.decls*
+*.dtrace*
+*.inv*
+problems/
