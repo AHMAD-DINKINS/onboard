@@ -9,18 +9,34 @@ import org.junit.runner.RunWith;
 
 public class AppendPairProgram {
 
-  // public int OldCount;
-  // public boolean OldIsLengthOdd;
+  public int OldCount;
+  public boolean OldIsLengthOdd;
+  public boolean OldIsValueAtEnd;
+  public int OldHead;
 
   public void TestStudentSubmission(List l, int elem) 
   {
-    // assumeTrue(l != null);
-    // // OldCount = l.size();
-    // // OldIsLengthOdd = l.isLengthOdd();
+    assumeTrue(l != null);
+    OldCount = l.size();
+    OldIsLengthOdd = l.isLengthOdd();
+    OldIsValueAtEnd = l.isValueAtEnd(elem);
+    OldHead = l.value;
     assumeTrue(l != null && l.next != l);
     List copy = clone(l);
+  
+    // System.out.println("l:" );
+    //  l.print();
+
+    // System.out.println("copy: ");
+    //  copy.print();
+
     l.addToEndRef(elem);
     copy.addToEndStu(elem);
+
+    // System.out.println("l: " );
+    //  l.print();
+    // System.out.println("copy: " );
+    //  copy.print();
 
     assertTrue(IsEqual(l, copy));
   }
@@ -40,6 +56,7 @@ public class AppendPairProgram {
   private static List clone(List l) {
     assumeTrue(l.next != l);
     List other = new List();
+    List head = other;
     List temp = l;
     for (; temp.next != null; temp = temp.next) {
       other.value = temp.value;
@@ -47,7 +64,7 @@ public class AppendPairProgram {
       other = other.next;
     }
     other.value = temp.value;
-    return other;
+    return head;
   }
 
   private boolean IsEqual(List R, List C) {
