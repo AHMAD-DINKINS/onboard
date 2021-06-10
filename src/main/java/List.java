@@ -33,6 +33,11 @@ public class List {
     }
   }
 
+  // public void print() {
+  //   for (List curr = this;curr != null; curr = curr.next)
+  //     System.out.println("Node: " + curr.value);
+  // }
+
   public int size() {
     int count = 1;
     for (List l = this.next; l != null; l = l.next) count++;
