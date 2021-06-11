@@ -60,19 +60,19 @@ public static void main(String[] args) throws Throwable {
 }
 """     
 
-        new_file = check_call_PUT(lines, tests)
+        new_file = check_call_PUT(lines, tests, "TestStudentSubmission")
 
         new_file = new_file.replace("public void test", "public static void test")
         with open(path_to_testfile, 'w') as f:
             f.write(new_file)
 
-def check_call_PUT(f_lines, tests):
+def check_call_PUT(f_lines, tests, PUT_name):
     remove = []
     for test in tests:
         start = pos_of_test(test[0], f_lines)
         found = False
         for line_idx in range(start, len(f_lines)):
-            if "TestStudentSubmission" in f_lines[line_idx]:
+            if PUT_name in f_lines[line_idx]:
                 found = True
             if found or "@Test" in f_lines[line_idx]:
                 break

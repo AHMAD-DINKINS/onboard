@@ -3,7 +3,7 @@ import os
 import textwrap
 import re
 
-# change to take in PUT_name
+#TODO use putname from shell script
 def comment(test, uncomment):
   with open(test) as f:
     lines = f.readlines()
@@ -13,25 +13,17 @@ def comment(test, uncomment):
       f.write("".join(lines).replace("//*", ""))
     return
 
-  comment = False
-  catch_seen = False
   for line_idx in range(len(lines)):
-    if "try" in lines[line_idx]:
-      comment = True
-    if "catch" in lines[line_idx]:
-      catch_seen = True
-      lines[line_idx] = "//*" + lines[line_idx]
-      continue
-    if not "TestStudentSubmission" in lines[line_idx] and comment:
-        lines[line_idx] = "//*" + lines[line_idx]
-    if catch_seen and "}" in lines[line_idx]:
-      comment = False
-      catch_seen = False
+    pos = -1
+    if "TestStudentSubmission" in lines[line_idx]:
+      pos = line_idx
+    if (pos > 0):
+      tempLines = "===".join(lines[pos:]).replace("assert", "//* assert")
+      lines[pos:] = tempLines.split("===")
+      break
 
   with open(test, 'w') as f:
     f.write("".join(lines))
-    
-
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
@@ -45,4 +37,3 @@ if __name__ == "__main__":
   uncomment = args.uncomment
 
   comment(test, uncomment)
-

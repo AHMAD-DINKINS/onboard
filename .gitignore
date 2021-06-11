@@ -5,3 +5,5 @@
 *.dtrace*
 *.inv*
 problems/
+.vscode/
+.scaffolding_list.tmp
