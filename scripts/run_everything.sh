@@ -81,3 +81,5 @@ java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chi
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_PASS_Randoop$file.dtrace
 done
+
+python3 scripts/comment_assert.py --test ./src/main/java/*PairProgram.java --uncomment
