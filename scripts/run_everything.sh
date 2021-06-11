@@ -31,6 +31,7 @@ for file in ./src/test/java/*
   do python ./scripts/comment_try_catch.py --test $file --uncomment
 done
 
+#create main in test files. This is needed to run daikon
 python3 scripts/init_test_runner.py --path-to-tests ./src/test/java/AppendPairProgram_ESTest.java --report ./target/surefire-reports/TEST-*PairProgram_ESTest.xml
 
 #TODO mulitiple pair programs will be affected, need as input
