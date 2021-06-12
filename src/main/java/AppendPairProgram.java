@@ -26,7 +26,7 @@ public class AppendPairProgram {
     l.addToEndRef(elem);
     copy.addToEndStu(elem);
 
-    //* assertTrue(IsEqual(l, copy));
+     assertTrue(IsEqual(l, copy));
   }
 
   // Generates all possible valid lists
