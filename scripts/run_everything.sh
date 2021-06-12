@@ -41,9 +41,9 @@ python3 scripts/comment_assert.py --test ./src/main/java/*PairProgram.java
 mvn test-compile
 
 #need the name of pair program or keep it in same file and just instrument that file
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.DynComp --ppt-select-pattern='AppendPairProgram' AppendPairProgram_ESTest
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.DynComp --ppt-select-pattern='TestStudentSubmission' AppendPairProgram_ESTest
 
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.Chicory --ppt-select-pattern='AppendPairProgram' --comparability-file=AppendPairProgram_ESTest.decls-DynComp AppendPairProgram_ESTest
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.Chicory --ppt-select-pattern='TestStudentSubmission' --comparability-file=AppendPairProgram_ESTest.decls-DynComp AppendPairProgram_ESTest
 
 #chnage to unzip ES wildcard
 gzip -d *PairProgram_ESTest.dtrace.gz
@@ -60,9 +60,9 @@ python3 scripts/init_test_runner.py --path-to-tests ./src/test/java/RegressionTe
 
 mvn test-compile
 
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.DynComp --ppt-select-pattern='AppendPairProgram' AppendPairProgram_ESTest
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.DynComp --ppt-select-pattern='TestStudentSubmission' AppendPairProgram_ESTest
 
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.Chicory --ppt-select-pattern='AppendPairProgram' --comparability-file=AppendPairProgram_ESTest.decls-DynComp AppendPairProgram_ESTest
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.Chicory --ppt-select-pattern='TestStudentSubmission' --comparability-file=AppendPairProgram_ESTest.decls-DynComp AppendPairProgram_ESTest
 
 gzip -d *PairProgram_ESTest.dtrace.gz
 
@@ -70,16 +70,16 @@ mv *PairProgram_ESTest.dtrace "${1}_PASS_ESTest.dtrace"
 
 for file in $(ls -1 ./src/test/java/ | grep -E 'ErrorTest[0-9][0-9]*.java$'); do
 file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar daikon.DynComp --ppt-select-pattern='AppendPairProgram' $file
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='AppendPairProgram' --comparability-file=$file.decls-DynComp $file
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar daikon.DynComp --ppt-select-pattern='TestStudentSubmission' $file
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='TestStudentSubmission' --comparability-file=$file.decls-DynComp $file
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_FAIL_Randoop$file.dtrace
 done
 
 for file in  $(ls -1 ./src/test/java/ | grep -E 'RegressionTest[0-9][0-9]*.java$'); do
 file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar daikon.DynComp --ppt-select-pattern='AppendPairProgram' $file
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='AppendPairProgram' --comparability-file=$file.decls-DynComp $file
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar daikon.DynComp --ppt-select-pattern='TestStudentSubmission' $file
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='TestStudentSubmission' --comparability-file=$file.decls-DynComp $file
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_PASS_Randoop$file.dtrace
 done
