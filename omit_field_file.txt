@@ -1,0 +1,4 @@
+AppendPairProgram.OldCount
+AppendPairProgram.OldIsLengthOdd
+AppendPairProgram.OldIsValueAtEnd
+AppendPairProgram.OldHead
