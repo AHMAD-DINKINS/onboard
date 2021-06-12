@@ -1,5 +1,4 @@
-.evosuite/
-*.txt
+.evosuite/  
 **/target/
 *.decls*
 *.dtrace*
