@@ -5,7 +5,7 @@ mvn clean
 mvn compile
 
 rm *.dtrace
-rm *.decls
+rm *.decls*
 rm ./src/test/java/*
 rm -r ./evosuite
 rm *.tmp
@@ -17,7 +17,8 @@ python3 scripts/comment_assert.py --test ./src/main/java/*PairProgram.java --unc
 mvn evosuite:generate -DcutsFile=myclasses.txt -DnumberOfCores=2 -DmemoryInMB=1600 -DtimeInMinutesPerClass=4 evosuite:export
 
 #assuming path to dependencies CHANGE THIS LATER
-java -cp ./target/classes:./dependencies/randoop-all-4.2.6.jar randoop.main.Main gentests --classlist=myclasses.txt --junit-output-dir=./src/test/java --time-limit=240 --progressdisplay=false
+java -cp ./target/classes:./dependencies/randoop-all-4.2.6.jar randoop.main.Main gentests --classlist=myclasses.txt --junit-output-dir=./src/test/java --time-limit=240 --progressdisplay=false --omit-field-file=omit_field_file.txt
+
 #comment try catch
 for file in ./src/test/java/*
   do python ./scripts/comment_try_catch.py --test $file
