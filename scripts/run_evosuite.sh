@@ -15,7 +15,7 @@ rm *.tmp
 python3 scripts/comment_assert.py --test ./src/main/java/*PairProgram.java --uncomment
 
 #run evosuite
-mvn evosuite:generate -DcutsFile=myclasses.txt -DnumberOfCores=2 -DmemoryInMB=1600 -DtimeInMinutesPerClass=1 evosuite:export
+mvn evosuite:generate -DcutsFile=myclasses.txt -DnumberOfCores=2 -DmemoryInMB=1600 -DtimeInMinutesPerClass=3 evosuite:export
 
 #comment try catch
 python ./scripts/comment_try_catch.py --test ./src/test/java/*PairProgram_ESTest.java
