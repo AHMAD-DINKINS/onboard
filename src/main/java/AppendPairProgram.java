@@ -22,7 +22,7 @@ public class AppendPairProgram {
     OldIsLengthOdd = l.isLengthOdd();
     OldIsValueAtEnd = l.isValueAtEnd(elem);
     OldHead = l.value;
-    assumeTrue(!true);
+    assumeTrue(true);
     List copy = clone(l);
 
     l.addToEndRef(elem);
