@@ -30,7 +30,6 @@ public class AppendPairProgram {
 
      //assumeTrue(IsEqual(l, copy));
      assertTrue(IsEqual(l, copy));
-
   }
 
   // Generates all possible valid lists
