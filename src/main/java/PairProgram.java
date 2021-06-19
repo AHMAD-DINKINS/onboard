@@ -7,12 +7,13 @@ import org.junit.runner.RunWith;
 
 // import org.junit.*;
 
-public class AppendPairProgram {
+public class PairProgram {
   /*Features*/
   public int OldCount;
   public boolean OldIsLengthOdd;
   public boolean OldIsValueAtEnd;
   public int OldHead;
+  public int OldElem;
   
 
   public void TestStudentSubmission(List l, int elem) 
@@ -22,7 +23,8 @@ public class AppendPairProgram {
     OldIsLengthOdd = l.isLengthOdd();
     OldIsValueAtEnd = l.isValueAtEnd(elem);
     OldHead = l.value;
-    assumeTrue(true);
+    OldElem = elem;
+    assumeTrue(!(true));
     List copy = clone(l);
 
     l.addToEndRef(elem);

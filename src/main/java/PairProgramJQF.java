@@ -9,7 +9,7 @@ import static org.junit.Assume.assumeTrue;
 
 // import org.junit.*;
 @RunWith(JQF.class)
-public class AppendPairProgramJQF {
+public class PairProgramJQF {
 
   // public int OldCount;
   // public boolean OldIsLengthOdd;
