@@ -18,7 +18,7 @@ def comment(test, uncomment):
     if "TestStudentSubmission" in lines[line_idx]:
       pos = line_idx
     if (pos > 0):
-      tempLines = "===".join(lines[pos:]).replace("assert", "//* assert")
+      tempLines = "===".join(lines[pos:]).replace("assertTrue", "//*assertTrue")
       lines[pos:] = tempLines.split("===")
       break
 
