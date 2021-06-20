@@ -13,12 +13,16 @@ def get_passing_failing_tests(report):
     tests = root.findall('testcase')
     for child in tests:
         failure = child.find('failure')
+        error = child.find('error')
         if child.find('skipped') is not None:
             continue
         elif failure is not None:
-            if 'AssertionError' in failure.get('type'):
+            if not 'AssumptionViolated' in failure.get('type'):
                 failing.append((child.get('name'), child.get('classname')))
-        elif not "Error" in child.get('name'):
+        elif error is not None:
+            if not 'AssumptionViolated' in error.get('type'):
+                failing.append((child.get('name'), child.get('classname')))
+        elif not "Error" in child.get('name') and not "Exception" in child.get('name'):
             passing.append((child.get('name'), child.get('classname')))
     return (passing, failing)
 
