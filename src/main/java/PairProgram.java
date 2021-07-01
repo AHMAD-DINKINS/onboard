@@ -33,7 +33,7 @@ public class PairProgram {
     
     //assumeTrue(IsEqual(l, copy));
     
-    boolean isEqual = IsEqual(l,copy);
+    boolean isEqual = !copy.isCyclic() && IsEqual(l,copy);
     if (isEqual)
       safe = true;
     
