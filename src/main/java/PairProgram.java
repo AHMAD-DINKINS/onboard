@@ -10,22 +10,23 @@ import org.junit.runner.RunWith;
 public class PairProgram {
   /*Features*/
   public int OldCount;
-  public boolean OldIsLengthOdd;
-  public boolean OldIsValueAtEnd;
   public int OldHead;
   public int OldElem;
+  public boolean OldIsLengthOdd;
+  public boolean OldIsValueAtEnd;
   public boolean safe= false;
 
   public void TestStudentSubmission(List l, int elem) 
   {
-    safe= false;
+    safe = false;
     assumeTrue(l != null && !l.isCyclic());
     OldCount = l.size();
-    OldIsLengthOdd = l.isLengthOdd();
-    OldIsValueAtEnd = l.isValueAtEnd(elem);
     OldHead = l.value;
     OldElem = elem;
-    assumeTrue(true);
+    OldIsLengthOdd = l.isLengthOdd();
+    OldIsValueAtEnd = l.isValueAtEnd(elem);
+    
+    assumeTrue(((OldCount <= 1)));
     List copy = clone(l);
 
     l.addToEndRef(elem);
