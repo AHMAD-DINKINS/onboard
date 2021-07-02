@@ -8,7 +8,6 @@ rm *.dtrace
 rm *.tmp
 rm *.decls*
 rm ./src/test/java/*
-rm -r ./evosuite
 rm *.tmp
 
 # ensures that pair programs have assertions
