@@ -20,7 +20,7 @@ java -cp ./target/classes:./dependencies/randoop-all-4.2.6.jar randoop.main.Main
 
 #comment try catch
 for file in $(ls -1 ./src/test/java/ | grep -E '(ErrorTest|RegressionTest)[0-9][0-9]*.java$');
-  do python ./scripts/comment_try_catch.py --test "src/test/java/$file"
+  do python3 ./scripts/comment_try_catch.py --test "src/test/java/$file"
 done
 
 #run tests to generate report
@@ -28,7 +28,7 @@ mvn test -q
 
 #uncomment try catch
 for file in $(ls -1 ./src/test/java/ | grep -E '(ErrorTest|RegressionTest)[0-9][0-9]*.java$');
-  do python ./scripts/comment_try_catch.py --test "src/test/java/$file" --uncomment
+  do python3 ./scripts/comment_try_catch.py --test "src/test/java/$file" --uncomment
 done
 
 # insert main with failing tests

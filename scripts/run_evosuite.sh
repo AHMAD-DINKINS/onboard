@@ -18,13 +18,13 @@ python3 scripts/comment_assert.py --test ./src/main/java/PairProgram.java --unco
 mvn evosuite:generate -DcutsFile=myclasses.txt -DnumberOfCores=2 -DmemoryInMB=1600 -DtimeInMinutesPerClass=4 evosuite:export
 
 #comment try catch
-python ./scripts/comment_try_catch.py --test ./src/test/java/PairProgram_ESTest.java
+python3 ./scripts/comment_try_catch.py --test ./src/test/java/PairProgram_ESTest.java
 
 #run tests to generate report
 mvn test -q
 
 #uncomment try catch
-python ./scripts/comment_try_catch.py --test ./src/test/java/PairProgram_ESTest.java --uncomment
+python3 ./scripts/comment_try_catch.py --test ./src/test/java/PairProgram_ESTest.java --uncomment
 
 #create main in test files for failing tests. This is needed to run daikon
 python3 scripts/init_test_runner.py --path-to-tests ./src/test/java/PairProgram_ESTest.java --report ./target/surefire-reports/TEST-PairProgram_ESTest.xml
