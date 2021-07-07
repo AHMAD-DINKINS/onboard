@@ -1,0 +1,15 @@
+  public void TestStudentSubmission(List l, int elem)
+  {
+    assumeTrue(l != null && !l.isCyclic());
+    safe = false;
+    OldCount = l.size();
+    OldHead = l.value;
+    OldElem = elem;
+    OldIsLengthOdd = l.isLengthOdd();
+    OldIsValueAtEnd = l.isValueAtEnd(elem);
+    try {
+      Test_StudentSubmission(l, elem);
+    } catch (Exception e) {
+      
+    }
+  }

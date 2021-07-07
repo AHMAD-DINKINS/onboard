@@ -14,19 +14,12 @@ public class PairProgram {
   public int OldElem;
   public boolean OldIsLengthOdd;
   public boolean OldIsValueAtEnd;
-  public boolean safe= false;
+  public boolean safe = false;
 
-  public void TestStudentSubmission(List l, int elem) 
+  public void TestStudentSubmission(List l, int elem)
   {
-    safe = false;
     assumeTrue(l != null && !l.isCyclic());
-    OldCount = l.size();
-    OldHead = l.value;
-    OldElem = elem;
-    OldIsLengthOdd = l.isLengthOdd();
-    OldIsValueAtEnd = l.isValueAtEnd(elem);
-    
-    assumeTrue(((OldCount <= 1)));
+    assumeTrue(false);
     List copy = clone(l);
 
     l.addToEndRef(elem);
@@ -34,7 +27,7 @@ public class PairProgram {
     
     //assumeTrue(IsEqual(l, copy));
     
-    boolean isEqual = IsEqual(l,copy);
+    boolean isEqual = !copy.isCyclic() && IsEqual(l,copy);
     if (isEqual)
       safe = true;
     
