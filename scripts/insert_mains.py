@@ -12,7 +12,7 @@ def get_passing_failing_tests(report):
     # ignoring asseriton errors in regresssion tests
     tree = ET.parse(report)
     root = tree.getroot()
-    tests = {"PASSING":[]}
+    tests = []
 
     tests_tree = root.findall('testcase')
     for child in tests_tree:
@@ -23,52 +23,31 @@ def get_passing_failing_tests(report):
             continue
         elif failure is not None:
             # if not 'AssumptionViolated' in failure.get('type'):
-            typ = failure.get('type').replace(":", "")
-            lpos_of_dot = typ.rindex('.')
-            typ = typ[lpos_of_dot + 1:]
-            if typ == "AssertionError" and "Regression" in class_name:
-                continue
-            if typ in tests:
-                tests[typ].append((child.get('name'), class_name))
-            else:
-                tests[typ] = [(child.get('name'), class_name)]
+            tests.append((child.get('name'), class_name))
         elif error is not None:
             # if not 'AssumptionViolated' in error.get('type')[:-1]:
-            typ = error.get('type').replace(":", "")
-            lpos_of_dot = typ.rindex('.')
-            typ = typ[lpos_of_dot + 1:]
-            if typ in tests:
-                tests[typ].append((child.get('name'), child.get('classname')))
-            else:
-                tests[typ] = [(child.get('name'), child.get('classname'))]
-        # Double check test is passing one
-        elif not "Error" in child.get('name') and not "Exception" in child.get('name'):
-            tests["PASSING"].append((child.get('name'), child.get('classname')))
+            tests.append((child.get('name'), child.get('classname')))
+        # Double check test is 'passing' one
+        else:
+            tests.append((child.get('name'), child.get('classname')))
 
     return tests
 
     
-def create_main(tests, path_to_tests, keeping):
+def create_main(tests, path_to_tests):
 
-    
-    for test_type in tests:
-        test_list = tests[test_type]
+    test_classes = get_tests(tests)
 
-        if len(test_list) == 0: continue
-
-        test_class, selected = get_random_tests(test_list, keeping, test_type)
-        
-        test_filenames = " ".join(path_to_tests)
-        
+    for test_class in test_classes:
         end = test_class[-1]
         #TODO fix this
         if end.isdigit():
             test_class = test_class[:len(test_class) - 1]
-        if not test_class in test_filenames:
+        if not test_class in path_to_tests:
             continue
         pattern = ' ?(.*' + test_class + '.*) ?'
         pattern = pattern.replace("\\S", "\S")
-        match = re.match(pattern, test_filenames).group(0)
+        match = re.match(pattern, path_to_tests).group(0)
         if end.isdigit():
             match = match.replace(test_class, test_class + end)
             test_class = test_class + end
@@ -82,46 +61,28 @@ def create_main(tests, path_to_tests, keeping):
                 lines[line_idx] += """
 
 public static void main(String[] args) throws Throwable {
-""" + "();\n".join(selected) + """();
+""" + "();\n".join(test_classes[test_class]) + """();
 }
 """
                 break     
 
         new_file = check_call_PUT(lines, tests, "TestStudentSubmission")
 
-
-
         new_file = new_file.replace("public void test", "public static void test")
-        lpos_of_fslash = path_to_testfile.rindex("/")
-        class_name = path_to_testfile[lpos_of_fslash + 1:].replace(".java", "")
-        new_class_name = class_name + "_" + test_type
-        new_file_name = path_to_testfile.replace(".java", "_" + test_type + ".java")
-        with open(new_file_name, 'w') as f:
-            new_file = new_file.replace(class_name + " ", new_class_name + " ")
+
+        with open(path_to_testfile, 'w') as f:
             f.write(new_file)
 
 
-def get_random_tests(tests, keeping, test_type):
+def get_tests(tests):
     test_classes = {}
     for test in tests:
         if test[1] in test_classes:
             test_classes[test[1]].append(test[0])
         else:
             test_classes[test[1]] = [test[0]]
-    
-    test_classes_keys = list(test_classes.keys())
-    test_class = test_classes_keys[random.randint(0, len(test_classes_keys) - 1)]
 
-    tests = test_classes[test_class]
-
-    if len(tests) <= keeping or "AssertionError" == test_type: return test_class, tests
-    selected = []
-    while len(selected) < keeping:
-        test_pos = random.randint(0, len(tests) - 1)
-        test = tests[test_pos]
-        tests.remove(test)
-        selected.append(test)
-    return test_class, selected
+    return test_classes
 
 
 def check_call_PUT(f_lines, tests, PUT_name):
@@ -159,16 +120,14 @@ if __name__ == "__main__":
     parser.add_argument("--path-to-tests", help="path of test(s) to instrument", type=str, nargs='+', required=True)
     parser.add_argument("--report", help="xml report with information on test", type=str, required=True)
     # parser.add_argument("--return-passing", help="Return passing tests cases (default is false)", default=False, action='store_true')
-    parser.add_argument("-k", "--keeping", help="The amount of test to write in each main", type=int, default=3)
 
     args = parser.parse_args()
 
-    path_to_tests = args.path_to_tests
+    path_to_tests = args.path_to_tests[0]
     report = args.report
     # return_passing = args.return_passing
-    keeping = args.keeping
 
     tests = get_passing_failing_tests(report)
 
-    create_main(tests, path_to_tests, keeping)
+    create_main(tests, path_to_tests)
 

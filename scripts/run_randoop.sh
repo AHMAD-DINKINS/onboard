@@ -3,7 +3,6 @@
 # clean repo
 rm *.dtrace
 rm .scaffolding_list*
-rm *.decls*
 rm ./src/test/java/*
 
 # ensures that pair programs have assertions and only inner put
@@ -50,16 +49,16 @@ python3 scripts/comment_assert.py --test ./src/main/java/PairProgram.java
 mvn test-compile
 
 # iterate through failing tests, call call daikon front end on each of them, label trace files
-for file in $(ls -1 ./src/test/java/ | grep -E 'ErrorTest[0-9][0-9]*_[a-zA-Z]*.java$'); do
+for file in $(ls -1 ./src/test/java/ | grep -E 'ErrorTest[0-9][0-9]*.java$'); do
 file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' --comparability-file=$file.decls-DynComp $file
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' $file
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_Randoop$file.dtrace
 done
 
-for file in  $(ls -1 ./src/test/java/ | grep -E 'RegressionTest[0-9][0-9]*_[a-zA-Z]*.java$'); do
+for file in  $(ls -1 ./src/test/java/ | grep -E 'RegressionTest[0-9][0-9]*.java$'); do
 file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' --comparability-file=$file.decls-DynComp $file
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' $file
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_Randoop$file.dtrace
 done

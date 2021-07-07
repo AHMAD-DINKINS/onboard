@@ -3,11 +3,11 @@
 # clean repo
 rm *.dtrace
 rm .scaffolding_list*
-rm *.decls*
 rm ./src/test/java/*
 
 # ensures that pair programs have assertions
 python3 scripts/comment_assert.py --test ./src/main/java/PairProgram.java --uncomment
+# make sure th wrapper is not there
 python3 ./scripts/insert_put.py --put ./put.txt --pair-program ./src/main/java/PairProgram.java --remove
 
 mvn clean
@@ -40,13 +40,12 @@ python3 scripts/comment_assert.py --test ./src/main/java/PairProgram.java
 mvn test-compile
 
 #need the name of pair program or keep it in same file and just instrument that file
-for file in $(ls -1 ./src/test/java/ | grep -E 'PairProgram_ESTest_[a-zA-Z]*(Error|Exception|PASSING).java$'); do
-file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' --comparability-file=$file.decls-DynComp $file
-gzip -d $file.dtrace.gz
+java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' PairProgram_ESTest
+
+gzip -d PairProgram_ESTest.dtrace.gz
+
 # Label dtrace
-mv $file.dtrace "${1}_$file.dtrace"
-done
+mv PairProgram_ESTest.dtrace "${1}_PairProgram_ESTest.dtrace"
 
 python3 scripts/comment_assert.py --test ./src/main/java/PairProgram.java --uncomment
 python3 ./scripts/insert_put.py --put ./put.txt --pair-program ./src/main/java/PairProgram.java --remove
