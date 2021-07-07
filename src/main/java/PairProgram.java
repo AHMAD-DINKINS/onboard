@@ -19,6 +19,7 @@ public class PairProgram {
   public void TestStudentSubmission(List l, int elem)
   {
     assumeTrue(l != null && !l.isCyclic());
+    assumeTrue(false);
     List copy = clone(l);
 
     l.addToEndRef(elem);
