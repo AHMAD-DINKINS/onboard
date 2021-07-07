@@ -15,7 +15,7 @@ mvn compile
 
 #assuming path to dependencies CHANGE THIS LATER
 #run randoop
-java -cp ./target/classes:./dependencies/randoop-all-4.2.6.jar randoop.main.Main gentests --classlist=myclasses.txt --junit-output-dir=./src/test/java --time-limit=60 --progressdisplay=false --omit-field-file=omit_field_file.txt
+java -cp ./target/classes:./dependencies/randoop-all-4.2.6.jar randoop.main.Main gentests --classlist=myclasses.txt --junit-output-dir=./src/test/java --time-limit=120 --progressdisplay=false --omit-field-file=omit_field_file.txt
 
 # modify pair program
 python3 ./scripts/insert_put.py --put ./put.txt --pair-program ./src/main/java/PairProgram.java
@@ -52,7 +52,6 @@ mvn test-compile
 # iterate through failing tests, call call daikon front end on each of them, label trace files
 for file in $(ls -1 ./src/test/java/ | grep -E 'ErrorTest[0-9][0-9]*_[a-zA-Z]*.java$'); do
 file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar daikon.DynComp --ppt-select-pattern='Test_?StudentSubmission' $file
 java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' --comparability-file=$file.decls-DynComp $file
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_Randoop$file.dtrace
@@ -60,7 +59,6 @@ done
 
 for file in  $(ls -1 ./src/test/java/ | grep -E 'RegressionTest[0-9][0-9]*_[a-zA-Z]*.java$'); do
 file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar daikon.DynComp --ppt-select-pattern='Test_?StudentSubmission' $file
 java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' --comparability-file=$file.decls-DynComp $file
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_Randoop$file.dtrace
