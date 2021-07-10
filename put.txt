@@ -1,0 +1,18 @@
+  public void TestStudentSubmission(int[] array)
+  {
+    assumeTrue(array != null);
+
+    OldCount = array.length;
+    OldIsAllZeros = isAllZeros(array);
+    OldLastElemIsZero = lastElemIsZero(array);
+    OldIsLengthOdd = isLengthOdd(array);
+    OldIndiciesMatchElements = indiciesMatchElems(array);
+    safe = false;
+
+    try {
+      Test_StudentSubmission(array);
+    } catch (Exception e) {
+      
+    }
+    
+  }
