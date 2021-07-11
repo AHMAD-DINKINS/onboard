@@ -15,16 +15,15 @@ public class ListGenerator extends Generator<List> {
     // This method is invoked to generate a single test case
     @Override
     public List generate(SourceOfRandomness random, GenerationStatus __ignore__) {
-        List ret = null;
+        List ret = new List();
         int size = random.nextInt(5);
 
-        for (int i = 0; i < size; i++) {
+        if(size >= 1)
+            ret.value = random.nextInt(-100, 100);
+
+        for (int i = 1; i < size; i++) {
             int value = random.nextInt(-100, 100);
-            if (i > 0) {
-                ret.addToEndRef(value);
-            } else {
-                ret = new List(value);
-            }
+            ret.addToEndRef(value);
         }
 
         return ret;
