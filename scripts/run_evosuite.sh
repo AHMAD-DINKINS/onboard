@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# clean repo
+#clean repo
 rm *.dtrace
 rm .scaffolding_list*
-rm ./src/test/java/*
+rm ./src/test/java/generated/*
 
 # ensures that pair programs have assertions
 python3 scripts/comment_assert.py --test ./src/main/java/PairProgram.java --uncomment
