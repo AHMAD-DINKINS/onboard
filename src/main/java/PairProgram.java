@@ -15,22 +15,29 @@ public class PairProgram {
   public boolean OldIsLengthOdd;
   public boolean OldIsValueAtEnd;
   public boolean safe = false;
-
+  //public static void main(String[] args){
+  //  PairProgram pairP = new PairProgram();
+  // List l = new List(-2);
+  //  l.addToEndRef(3);
+  //  l.addToEndRef(5`);
+  //}
+  
   public void TestStudentSubmission(List l, int elem)
   {
     assumeTrue(l != null && !l.isCyclic());
-    assumeTrue(false);
+    assumeTrue(true);
     List copy = clone(l);
-
+    System.out.println("size before: " + copy.size());
     l.addToEndRef(elem);
     copy.addToEndStu(elem);
+    System.out.println("size after: " +copy.size());
     
     //assumeTrue(IsEqual(l, copy));
     
     boolean isEqual = !copy.isCyclic() && IsEqual(l,copy);
     if (isEqual)
       safe = true;
-    
+    System.out.println("safe? "+ this.safe);
     assertTrue(isEqual);
     
   }
@@ -64,5 +71,7 @@ public class PairProgram {
   private boolean IsEqual(List R, List C) {
     return R.equals(C);
   }
+
+
 
 }
