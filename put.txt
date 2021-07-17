@@ -6,7 +6,8 @@
     OldIsAllZeros = isAllZeros(array);
     OldLastElemIsZero = lastElemIsZero(array);
     OldIsLengthOdd = isLengthOdd(array);
-    OldIndiciesMatchElements = indiciesMatchElems(array);
+    OldIndiciesMatchElements = indiciesMatchElements(array);
+    OldLengthEqualsSum = lengthEqualsSum(array);
     safe = false;
 
     try {
