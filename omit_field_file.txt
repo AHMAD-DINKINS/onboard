@@ -1,0 +1,6 @@
+PairProgram.OldCount
+PairProgram.OldIsAllZeros;
+PairProgram.OldLastElemIsZero;
+PairProgram.OldIsLengthOdd;
+PairProgram.OldIndiciesMatchElements
+PairProgram.safe
