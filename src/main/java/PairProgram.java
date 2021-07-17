@@ -14,6 +14,7 @@ public class PairProgram {
   public boolean OldLastElemIsZero;
   public boolean OldIsLengthOdd;
   public boolean OldIndiciesMatchElements;
+  public boolean OldLengthEqualsSum;
   public boolean safe = false;
 
   public void TestStudentSubmission(int[] array)
@@ -41,7 +42,8 @@ public class PairProgram {
     return copy;
   }
 
-  public static int[] generateArray(int[] array, int kind) {
+  public int[] generateArray(int[] array, int kind) {
+      assumeTrue(array != null);
       int[] toRet = new int[array.length];
       boolean empty = toRet.length == 0;
       if (empty) {
@@ -61,58 +63,11 @@ public class PairProgram {
           // generate last elem is zero
           array[array.length - 1] = 0;
           return array;
+        case 3:
+          // generate length equals sum
+          toRet[toRet.length - 1] = toRet.length;
+          return toRet;
       }
       return array;
   }
-
-/**
- * Return the sum of the elements in array.
- */
-private static int sumStu(final int[] array) {
-    int count = 0;
-    for (int i = 0; i < array.length; i++) {
-        count++;
-    }
-    return count; 
 }
-private static int sumRef(final int[] array) {
-    int sum = 0;
-    for (int i = 0; i < array.length; i++) {
-        sum += array[i];
-    }
-    
-    return sum;
-}
-
-private boolean IsEqual(int[] R, int[] C) {
-    if (R.length != C.length) return false;
-    for (int i = 0; i < R.length; ++i) {
-      if (R[i] != C[i]) return false;
-    }
-    return true;
-  }
-
-  /**
-   * Beginning of Obsevers
-   */
-  private static boolean isAllZeros(int[] arr) {
-    for (int elem: arr) {
-      if (elem != 0) return false;
-    }
-    return true;
-  }
-
-  private static boolean lastElemIsZero(int[] arr) {
-    return arr[arr.length - 1] == 0;
-  }
-
-  private static boolean indiciesMatchElements(int[] arr) {
-    for (int i = 0; i < arr.length; ++i) {
-      if (arr[i] != i) return false;
-    }
-    return true;
-  }
-
-  private static boolean isLengthOdd(int[] arr) {
-    return arr.length % 2 == 1;
-  }}
