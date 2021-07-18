@@ -14,24 +14,24 @@ mvn clean
 mvn compile
 
 #run evosuite
-mvn evosuite:generate -DcutsFile=myclasses.txt -DnumberOfCores=2 -DmemoryInMB=1600 -DtimeInMinutesPerClass=4 evosuite:export
+mvn evosuite:generate -DcutsFile=myclasses.txt -DnumberOfCores=2 -DmemoryInMB=1600 -DtimeInMinutesPerClass=4 evosuite:export -DtargetFolder=./src/test/java/generated/
 
 # modify pair program
 python3 ./scripts/insert_put.py --put ./put.txt --pair-program ./src/main/java/PairProgram.java
 
 #comment try catch
-python3 ./scripts/comment_try_catch.py --test ./src/test/java/PairProgram_ESTest.java
+python3 ./scripts/comment_try_catch.py --test ./src/test/java/generated/PairProgram_ESTest.java
 python3 ./scripts/comment_try_catch.py --test ./src/main/java/PairProgram.java
 
 #run tests to generate report
 mvn test -q
 
 #uncomment try catch
-python3 ./scripts/comment_try_catch.py --test ./src/test/java/PairProgram_ESTest.java --uncomment
+python3 ./scripts/comment_try_catch.py --test ./src/test/java/generated/PairProgram_ESTest.java --uncomment
 python3 ./scripts/comment_try_catch.py --test ./src/main/java/PairProgram.java --uncomment
 
 #create main in test files. This is needed to run daikon
-python3 scripts/insert_mains.py --path-to-tests ./src/test/java/PairProgram_ESTest.java --report ./target/surefire-reports/TEST-PairProgram_ESTest.xml
+python3 scripts/insert_mains.py --path-to-tests ./src/test/java/generated/PairProgram_ESTest.java --report ./target/surefire-reports/TEST-PairProgram_ESTest.xml
 
 #TODO mulitiple pair programs will be affected, need as input
 # comment out assert to let daikon run without stopping 

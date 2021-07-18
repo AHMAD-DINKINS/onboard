@@ -14,7 +14,7 @@ mvn compile
 
 #assuming path to dependencies CHANGE THIS LATER
 #run randoop
-java -cp ./target/classes:./dependencies/randoop-all-4.2.6.jar randoop.main.Main gentests --classlist=myclasses.txt --junit-output-dir=./src/test/java/generated --time-limit=120 --progressdisplay=false --omit-field-file=omit_field_file.txt
+java -cp ./target/classes:./dependencies/randoop-all-4.2.6.jar randoop.main.Main gentests --classlist=myclasses.txt --junit-output-dir=./src/test/java/generated/ --time-limit=120 --progressdisplay=false --omit-field-file=omit_field_file.txt
 
 # modify pair program
 python3 ./scripts/insert_put.py --put ./put.txt --pair-program ./src/main/java/PairProgram.java

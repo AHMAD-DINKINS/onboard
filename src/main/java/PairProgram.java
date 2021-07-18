@@ -19,7 +19,12 @@ public class PairProgram {
   public void TestStudentSubmission(List l, int elem)
   {
     assumeTrue(l != null && !l.isCyclic());
-    assumeTrue(false);
+    OldCount = l.size();
+    OldHead = l.value;
+    OldElem = elem;
+    OldIsLengthOdd = l.isLengthOdd();
+    OldIsValueAtEnd = l.isValueAtEnd(elem);
+    assumeTrue(true);
     List copy = clone(l);
 
     l.addToEndRef(elem);

@@ -96,7 +96,7 @@ def check_call_PUT(f_lines, tests, PUT_name):
             if found or "@Test" in f_lines[line_idx]:
                 break
         if not found:
-            remove.append(test[0] + "();")
+            remove.append(test[0] + "();\n")
 
     f_lines = "".join(f_lines)
 
