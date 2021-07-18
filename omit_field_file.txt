@@ -3,4 +3,6 @@ PairProgram.OldIsAllZeros;
 PairProgram.OldLastElemIsZero;
 PairProgram.OldIsLengthOdd;
 PairProgram.OldIndiciesMatchElements
+PairProgram.OldLengthEqualsSum
+PairProgram.OldLastElemEqualsLength
 PairProgram.safe

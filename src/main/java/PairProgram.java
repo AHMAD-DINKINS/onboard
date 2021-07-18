@@ -15,12 +15,21 @@ public class PairProgram {
   public boolean OldIsLengthOdd;
   public boolean OldIndiciesMatchElements;
   public boolean OldLengthEqualsSum;
+  public boolean OldLastElemEqualsLength;
   public boolean safe = false;
 
   public void TestStudentSubmission(int[] array)
   {
     assumeTrue(array != null);
-    assumeTrue(true);
+    OldCount = array.length;
+    OldIsAllZeros = isAllZeros(array);
+    OldLastElemIsZero = lastElemIsZero(array);
+    OldIsLengthOdd = isLengthOdd(array);
+    OldIndiciesMatchElements = indiciesMatchElements(array);
+    OldLengthEqualsSum = lengthEqualsSum(array);
+    OldLastElemEqualsLength = lastElemEqualsLength(array);
+    safe = false;
+    assumeTrue(((OldIsAllZeros)) || (( ! (OldLastElemIsZero)) && ( ! (OldIsLengthOdd)) && (OldCount <= 5)));
     int[] copy = clone(array);
 
     int refSum = sumRef(array);

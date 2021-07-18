@@ -8,6 +8,7 @@
     OldIsLengthOdd = isLengthOdd(array);
     OldIndiciesMatchElements = indiciesMatchElements(array);
     OldLengthEqualsSum = lengthEqualsSum(array);
+    OldLastElemEqualsLength = lastElemEqualsLength(array);
     safe = false;
 
     try {
