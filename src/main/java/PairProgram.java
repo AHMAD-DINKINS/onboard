@@ -41,7 +41,7 @@ public class PairProgram {
   }
 
   // Generates all possible valid lists
-  public static List listgen(int[] init) {
+  public static List generateList(int[] init) {
     assumeTrue(init != null);
     List l = new List();
     if (init.length >= 1) {
