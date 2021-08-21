@@ -16,6 +16,11 @@ mvn compile
 #run randoop
 java -cp ./target/classes:./dependencies/randoop-all-4.2.6.jar randoop.main.Main gentests --classlist=myclasses.txt --junit-output-dir=./src/test/java/generated --time-limit=120 --progressdisplay=false --omit-field-file=omit_field_file.txt
 
+# modify tests
+for file in $(ls -1 ./src/test/java/generated/ | grep -E '(ErrorTest|RegressionTest)[0-9][0-9]*.java$');
+  do python3 ./scripts/modify_tests.py -t "/home/ahmaddinkins/onboard/src/test/java/generated/$file" -p "TestStudentSubmission" --type "int[]" -a ""
+done
+
 # modify pair program
 python3 ./scripts/insert_put.py --put ./put.txt --pair-program ./src/main/java/PairProgram.java
 

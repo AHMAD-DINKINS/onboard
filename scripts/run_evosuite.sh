@@ -16,6 +16,9 @@ mvn compile
 #run evosuite
 mvn evosuite:generate -DcutsFile=myclasses.txt -DnumberOfCores=2 -DmemoryInMB=1600 -DtimeInMinutesPerClass=4 evosuite:export -DtargetFolder=./src/test/java/generated/
 
+# modify tests
+python3 ./scripts/modify_tests.py -t /home/ahmaddinkins/onboard/src/test/java/generated/PairProgram_ESTest.java -p "TestStudentSubmission" --type "int[]" -a ""
+
 # modify pair program
 python3 ./scripts/insert_put.py --put ./put.txt --pair-program ./src/main/java/PairProgram.java
 
