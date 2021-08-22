@@ -56,14 +56,26 @@ mvn test-compile
 # iterate through failing tests, call call daikon front end on each of them, label trace files
 for file in $(ls -1 ./src/test/java/generated/ | grep -E 'ErrorTest[0-9][0-9]*.java$'); do
 file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' $file
+timeout 30m java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' $file
+
+if [ $? == "124" ]
+then
+  echo "TIMED OUT"
+fi
+
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_Randoop$file.dtrace
 done
 
 for file in  $(ls -1 ./src/test/java/generated/ | grep -E 'RegressionTest[0-9][0-9]*.java$'); do
 file="${file%.*}"
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' $file
+timeout 30m java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' $file
+
+if [ $? == "124" ]
+then
+  echo "TIMED OUT"
+fi
+
 gzip -d $file.dtrace.gz
 mv $file.dtrace $1_Randoop$file.dtrace
 done

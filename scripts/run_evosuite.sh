@@ -43,7 +43,12 @@ python3 scripts/comment_assert.py --test ./src/main/java/PairProgram.java
 mvn test-compile
 
 #need the name of pair program or keep it in same file and just instrument that file
-java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' PairProgram_ESTest
+timeout 30m java -cp ./target/classes:./target/test-classes:$DAIKONDIR/daikon.jar:dependencies/junit-4.13.jar:dependencies/evosuite-standalone-runtime-1.1.1-SNAPSHOT.jar:dependencies/hamcrest-core-1.3.jar daikon.Chicory --ppt-select-pattern='Test_?StudentSubmission' PairProgram_ESTest
+
+if [ $? == "124" ]
+then
+  echo "TIMED OUT"
+fi
 
 gzip -d PairProgram_ESTest.dtrace.gz
 
