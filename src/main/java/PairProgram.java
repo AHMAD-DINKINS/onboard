@@ -25,14 +25,11 @@ public class PairProgram {
   public void TestStudentSubmission(List l, int elem)
   {
     assumeTrue(l != null && !l.isCyclic());
-<<<<<<< HEAD
-=======
     OldCount = l.size();
     OldHead = l.value;
     OldElem = elem;
     OldIsLengthOdd = l.isLengthOdd();
     OldIsValueAtEnd = l.isValueAtEnd(elem);
->>>>>>> fa74af3297a65c157b2bec41b9209ea0b3a3ef91
     assumeTrue(true);
     List copy = clone(l);
     System.out.println("size before: " + copy.size());
